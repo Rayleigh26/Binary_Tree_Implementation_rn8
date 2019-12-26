@@ -7,3 +7,4 @@ class BinarySearchTree{
 	virtual bool search(int data)=0;
 };
 
+	
