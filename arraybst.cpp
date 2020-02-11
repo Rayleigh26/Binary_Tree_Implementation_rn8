@@ -143,7 +143,7 @@ int main()
 	
 	
 	std::cout<<A.search(2)<<std::endl;
-	std::cout<<A.search(7)<<std::endl;
+	std::cout<<A.search(70)<<std::endl;
 	std::cout<<A.min()<<std::endl;
 	std::cout<<A.max()<<std::endl;
 	std::cout<<std::endl;
