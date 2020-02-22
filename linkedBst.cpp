@@ -90,5 +90,53 @@ void LinkedBST::traverse(Node* root) {
   
     
     traverse(root->right); 
-}   
+}  
+int LinkedBST::min()
+{
+    while (root->left != NULL)
+    {
+        root = root->left;
+    }
+    return root->data;
+}
+
+int LinkedBST::max()
+{
+    while (root->right != NULL)
+    {
+        root = root->right;
+    }
+    return root->data;
+}
+int main(){
+
+    cout<<"binary tree Implementation using linked list"<<endl;
+    LinkedBST tree;
+    cout<<"Pre order traveral: "<<endl;
+    tree.add(1);
+    tree.add(2);
+    tree.add(3);
+    tree.add(4);
+    tree.preorderTraversal();
+    cout<<endl;
+    cout<<"Add a number : "<<endl;
+    cout<<"Pre order traveral: "<<endl;
+    int anum;
+    cim>>anum;
+    tree.add(anum);
+    tree.preorderTraversal();
+    cout<<endl;
+    cout<<"enter a number to search";
+    int num1;
+    cin>>num1;
+    if(tree.search(num1) == 1){
+        cout<<"Yes!";
+    }else{
+        cout<<"NO!";
+    }
+    cout<<endl;
+    cout<<"\nmaximun element is:"<<LinkedBST.max()<<"\n";
+    cout<<"\nminimun element is:"<<LinkedBST.min()<<"\n";
+
+} 
 

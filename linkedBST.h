@@ -1,5 +1,3 @@
-#ifndef linkedBST_h
-#define linkedBST_h
 #include "binary.h"
 class Node{
 	int data;
@@ -10,14 +8,16 @@ class LinkedBST: public BinarySearchTree{
 	public:
 		LinkedBST();
 		~LinkedBST();
-		    void add(int data);
-    void add(Node* &root,int data);
+		void add(int data);
+        void add(Node* &root,int data);
 		bool find(Node* &root,int targetKey);
-		void insert(int data);
+		void insert(Node* &subtree, Node* newNode);
 		bool search(int data);
 		void traverse(Node* root);
+		int min();
+		int max();
 	private:
-		Node *root;
+		Node* root;
 };
 
  
